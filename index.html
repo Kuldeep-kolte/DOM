@@ -149,14 +149,11 @@
             change.innerText = "Welcome to Elevation academy";
         }
     </pre>
-    <h4>Q.9 Write code to implement timer clock using JS -- display HH:MM:SS -- the time should keep updating every second
+    <h4>Q.9 Write code to implement timer clock using JS -- display HH:MM:SS -- the time should keep updating every
+        second
     </h4>
     <div id="clock" onload="currentTime()"></div>
-
-
     <script>
-
-
         function currentTime() {
             let date = new Date();
             let hh = date.getHours();
@@ -183,12 +180,38 @@
         }
 
         currentTime();
+    </script>
+    <h4>Q.10 Create a select drop down for selecting Year 20-21, 21-22 etc. Print the item text selected</h4>
 
+    <select id="list">
+        <option value="20-21">20-21</option>
+        <option value="21-22">21-22</option>
+        <option value="22-23">22-23</option>
+        <option value="23-24">23-24</option>
+        <option value="24-25">24-25</option>
+    </select>
+    <button type="button" onclick="myFun()">click here to display selected value</button>
+    <h2 id="opt"></h2>
+    <script>
+        function myFun() {
+            let a = document.getElementById("list").value;
+            let b = document.getElementById("opt");
+            b.innerHTML = a;
+        }
 
     </script>
-
-
-
+    <h4>Q.11 Create a form having name ,email, phone no. , birth year Add validations - phone no. should start with 91 ,
+        it should be 10 digits email should be domain prepbytes.com birth year should be > 95</h4>
+        <form action="">
+            <label for="name">Name :</label>
+            <input type="text" placeholder="Enter Your Name"><br><br>
+            <label for="email">Email :</label>
+            <input type="email" placeholder="abcd@prepbytes.com"><br><br>
+            <label for="phone no.">Mobile No. :</label>
+            <input type="text" maxlength="10" placeholder="Mobile number"><br><br>
+            <label for="birthdate"> Year of birth :</label>
+            <input type="text" placeholder="Enter year of birth e.g 1996">
+        </form>
 
 </body>
 
